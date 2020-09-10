@@ -16,7 +16,7 @@ export default () => {
         <Route path='/admin/:path?' exact>
           <GuestLayout>
             <Switch>
-              <Route path='/admin' exact component={Home} />
+              <Route path='/admin' exact component={Main} />
               <Route path='/admin/setting' component={Main} />
             </Switch>
           </GuestLayout>
