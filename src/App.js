@@ -6,6 +6,10 @@ import MainLayout from './layouts/MainLayout'
 import Home from './pages/Home/Home.comp'
 import Main from './pages/Main/Main.comp'
 
+// articles CRUD
+import ArticleList from './pages/Articles/ArticleList/ArticleList'
+import ArticleAdd from './pages/Articles/ArticleAdd/ArticleAdd'
+
 export default () => {
 
   return (
@@ -25,8 +29,9 @@ export default () => {
         <Route>
           <MainLayout>
             <Switch>
-              <Route path='/' exact component={Home} />
-              <Route path='/about' component={Home} />
+              <Route path='/articles/add' component={ArticleAdd} />
+              <Route path='/articles' component={ArticleList} />
+              <Route path='/' component={Home} />
             </Switch>
           </MainLayout>
         </Route>

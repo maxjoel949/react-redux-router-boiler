@@ -1,0 +1,22 @@
+.color_card__wrapper {
+    background: #333333;
+    text-align: center;
+    width: 100%;
+    margin: 0 10px;
+    &:first-child {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    &:last-child {
+        margin-left: 10px;
+        margin-right: 0;
+    }
+}
+.color_card__title {
+    color: white;
+    font-size: 4em;
+}
+.color_card__description {
+    color: white;
+    font-size: 1.2em;
+}

@@ -2,19 +2,19 @@ const initialState = {
     menuList: [
         {
             id: 0,
-            name: 'Inicio',
+            name: 'Dashboard',
             link: '/',
             is_selected: true
         }, 
         {
             id: 1,
-            name: 'Enlaces',
-            link: '/enlaces',
+            name: 'Artículos',
+            link: '/articles',
             is_selected: false
         },
         {
             id: 2,
-            name: 'Proyectos (sitios)',
+            name: 'Media',
             link: '/proyectos',
             is_selected: false
         }

@@ -1,19 +1,13 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 import { useDispatch } from 'react-redux'
-import { cambiarSaludo } from '../../actions/actionCreators'
 
 const Main = () => {
-    const dispatch = useDispatch()
-    const _cambiarSaludo = useCallback(
-        () => {
-            dispatch(cambiarSaludo('wena prrrrrro'))
-        },
-        [dispatch],
-    )
+    // const dispatch = useDispatch()
+    
     return (
         <div className="main__wrapper">
             <h2> Soy el main </h2>
-            <button onClick={_cambiarSaludo}> Clickeame perro </button>
+            <button> Clickeame perro </button>
         </div>
     )
 }
