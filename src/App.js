@@ -9,6 +9,7 @@ import Main from './pages/Main/Main.comp'
 // articles CRUD
 import ArticleList from './pages/Articles/ArticleList/ArticleList'
 import ArticleAdd from './pages/Articles/ArticleAdd/ArticleAdd'
+import CategoriesContainer from './pages/Categories/Categories.container'
 
 export default () => {
 
@@ -29,6 +30,9 @@ export default () => {
         <Route>
           <MainLayout>
             <Switch>
+              <Route path='/categories/add' component={ArticleAdd} />
+              <Route path='/categories' component={CategoriesContainer} />
+
               <Route path='/articles/add' component={ArticleAdd} />
               <Route path='/articles' component={ArticleList} />
               <Route path='/' component={Home} />

@@ -1,14 +1,14 @@
 import React from 'react'
+import './Table.scss'
 
 const Table = ({ tableHeaders, tableContent }) => {
-
     return (
         <div className="table__wrapper">
             <table>
                 <thead>
                     <tr>
                         {
-                            tableHeaders.map( (e, i) => {
+                            tableHeaders && tableHeaders.map((e, i) => {
                                 return (
                                     <td key={ `head-${e.key}-${i}` }>
                                         { e.title }
@@ -20,20 +20,24 @@ const Table = ({ tableHeaders, tableContent }) => {
                 </thead>
                 <tbody>
                     {
-                        tableContent.map( (e, i) => {
-                            return (
-                                <tr key={ `row-${i}`}>
-                                    {
-                                        tableHeaders.map( (f, j) => (
+                        tableContent && tableContent.map((e, i) => (
+                            <tr key={`row-${i}`}>
+                                {
+                                    tableHeaders.map( (f, j) => (
+                                        f.render ? (
+                                            <td key={ `${f.key}-${e.key}-${i}` }>
+                                                {f.render(e)}
+                                            </td> 
+                                        ) : (
                                             <td key={ `${f.key}-${e.key}-${i}` }>
                                                 { e[f.key] }
                                             </td>
-                                        ))
-                                    }
+                                        )
+                                    ))
                                     
-                                </tr>
-                            )
-                        })
+                                }
+                            </tr>
+                        ))
                     }
                 </tbody>
             </table>

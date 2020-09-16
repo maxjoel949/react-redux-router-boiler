@@ -14,6 +14,12 @@ const initialState = {
         },
         {
             id: 2,
+            name: 'Categorías',
+            link: '/categories',
+            is_selected: false
+        }, 
+        {
+            id: 3,
             name: 'Media',
             link: '/proyectos',
             is_selected: false
